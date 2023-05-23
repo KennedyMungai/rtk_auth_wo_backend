@@ -40,6 +40,7 @@ const Auth = () => {
 											type='email'
 											name='email'
 											value={email}
+											onChange={handleChange}
 										/>
 									</div>
 								</div>
