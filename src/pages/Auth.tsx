@@ -28,6 +28,11 @@ const Auth = () => {
 									<h2 className='fw-bold mb-2 text-uppercase'>
 										{!showRegister ? 'Login' : 'Register'}
 									</h2>
+									<p className='text-white-50 mb-'>
+										{!showRegister
+											? 'Please Enter your Email and Password'
+											: 'Please Enter User Details'}
+									</p>
 								</div>
 							</div>
 						</div>
