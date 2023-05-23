@@ -1,5 +1,5 @@
 import { MDBInput } from 'mdb-react-ui-kit'
-import { useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const initialState = {
@@ -15,6 +15,8 @@ const Auth = () => {
 	const [showRegister, setShowRegister] = useState(false)
 
 	const { firstName, lastName, email, password, confirmPassword } = formValue
+
+	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {}
 
     return (
 		<section className='vh-100 vw-100 gradient-custom'>
