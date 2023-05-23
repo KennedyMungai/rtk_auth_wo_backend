@@ -47,6 +47,16 @@ const Auth = () => {
 											className='form-control form-control-lg'
 										/>
 									</div>
+									<div className='form-outline form-white mb-4'>
+										<MDBInput
+											type='password'
+											name='password'
+											value={password}
+											onChange={handleChange}
+											label='Password'
+											className='form-control form-control-lg'
+										/>
+									</div>
 								</div>
 							</div>
 						</div>
