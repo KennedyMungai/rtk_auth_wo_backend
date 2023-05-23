@@ -99,6 +99,7 @@ const Auth = () => {
 										<button
 											className='btn btn-outline-light btn-lg px-5'
 											type='button'
+											onClick={() => handleLogin()}
 										>
 											Login
 										</button>
