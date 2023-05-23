@@ -59,19 +59,38 @@ const Auth = () => {
 									</div>
 									{!showRegister ? (
 										<button
-											className='btn btn-outline-light btn-lg px-5'
+											className='btn btn-outline-light btn-lg px-5 my-2'
 											type='button'
 										>
 											Login
 										</button>
 									) : (
 										<button
-											className='btn btn-outline-light btn-lg px-5'
+											className='btn btn-outline-light btn-lg px-5 my-2'
 											type='button'
 										>
 											Register
 										</button>
 									)}
+									<div className=''>
+										<h5 className='mb-0'>
+											{!showRegister ? (
+												<>
+													Don't have an account?{' '}
+													<p className='text-white-50 fw-bold'>
+														Sign Up
+													</p>
+												</>
+											) : (
+												<>
+													Already have an account?
+													<p className='text-white-50 fw-bold'>
+														Sign In
+													</p>
+												</>
+											)}
+										</h5>
+									</div>
 								</div>
 							</div>
 						</div>
