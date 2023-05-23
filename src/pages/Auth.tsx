@@ -57,6 +57,21 @@ const Auth = () => {
 											className='form-control form-control-lg'
 										/>
 									</div>
+									{!showRegister ? (
+										<button
+											className='btn btn-outline-light btn-lg px-5'
+											type='button'
+										>
+											Login
+										</button>
+									) : (
+										<button
+											className='btn btn-outline-light btn-lg px-5'
+											type='button'
+										>
+											Register
+										</button>
+									)}
 								</div>
 							</div>
 						</div>
