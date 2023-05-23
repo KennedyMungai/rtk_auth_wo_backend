@@ -12,8 +12,18 @@ const initialState = {
 }
 
 const Auth = () => {
-    const [formValue, setFormValue] = useState(initialState)
+	const [formValue, setFormValue] = useState(initialState)
 	const [showRegister, setShowRegister] = useState(false)
+
+	const [
+		loginUser,
+		{
+			data: loginData,
+			isSuccess: isLoginSuccess,
+			isError: isLoginError,
+			error: loginError
+		}
+	] = useLoginUserMutation()
 
 	const { firstName, lastName, email, password, confirmPassword } = formValue
 
@@ -23,7 +33,7 @@ const Auth = () => {
 
 	const handleLogin = () => {}
 
-    return (
+	return (
 		<section className='vh-100 vw-100 gradient-custom'>
 			<div className='container py-4 h-100'>
 				<div className='row d-flex justify-content-center align-items-center h-100'>
