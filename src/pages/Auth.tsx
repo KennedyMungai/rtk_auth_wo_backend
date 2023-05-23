@@ -37,6 +37,30 @@ const Auth = () => {
 											? 'Please Enter your Email and Password'
 											: 'Please Enter User Details'}
 									</p>
+									{showRegister && (
+										<>
+											<div className='form-outline form-white mb-4'>
+												<MDBInput
+													type='text'
+													name='firstname'
+													value={firstName}
+													onChange={handleChange}
+													label='First Name'
+													className='form-control form-control-lg'
+												/>
+											</div>
+											<div className='form-outline form-white mb-4'>
+												<MDBInput
+													type='text'
+													name='lastname'
+													value={lastname}
+													onChange={handleChange}
+													label='Last Name'
+													className='form-control form-control-lg'
+												/>
+											</div>
+										</>
+									)}
 									<div className='form-outline form-white mb-4'>
 										<MDBInput
 											type='email'
@@ -57,6 +81,18 @@ const Auth = () => {
 											className='form-control form-control-lg'
 										/>
 									</div>
+									{showRegister && (
+										<div className='form-outline form-white mb-4'>
+											<MDBInput
+												type='password'
+												name='password'
+												value={password}
+												onChange={handleChange}
+												label='Password'
+												className='form-control form-control-lg'
+											/>
+										</div>
+									)}
 									{!showRegister ? (
 										<button
 											className='btn btn-outline-light btn-lg px-5'
