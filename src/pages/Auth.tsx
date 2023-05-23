@@ -11,6 +11,8 @@ const initialState = {
 }
 
 const Auth = () => {
+	const [formValue, setFormValue] = useState(initialState)
+
 	return <div>Auth</div>
 }
 
