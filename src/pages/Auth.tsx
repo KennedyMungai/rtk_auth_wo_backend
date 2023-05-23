@@ -1,7 +1,8 @@
 import { MDBInput } from 'mdb-react-ui-kit'
 import { ChangeEvent, useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import { useLoginUserMutation } from '../services/authApi'
+import { toast } from 'react-toastify'
 
 const initialState = {
 	firstName: '',
@@ -14,6 +15,8 @@ const initialState = {
 const Auth = () => {
 	const [formValue, setFormValue] = useState(initialState)
 	const [showRegister, setShowRegister] = useState(false)
+
+	const navigate = useNavigate()
 
 	const [
 		loginUser,
@@ -31,7 +34,20 @@ const Auth = () => {
 		setFormValue({ ...formValue, [e.target.name]: e.target.value })
 	}
 
-	const handleLogin = () => {}
+	const handleLogin = async () => {
+		if (email && password) {
+			await loginUser({ email, password })
+		} else {
+			toast.error('Please fill all input fields')
+			navigate('/dashboard')
+		}
+	}
+
+	useEffect(() => {
+		if (isLoginSuccess) {
+			toast.success('User logged in successfully')
+		}
+	}, [isLoginSuccess])
 
 	return (
 		<section className='vh-100 vw-100 gradient-custom'>
