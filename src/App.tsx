@@ -1,8 +1,8 @@
 import {
-	BrowserRouter as Router,
+	Navigate,
 	Route,
-	Routes,
-	Navigate
+	BrowserRouter as Router,
+	Routes
 } from 'react-router-dom'
 import './App.css'
 import Auth from './pages/Auth'
