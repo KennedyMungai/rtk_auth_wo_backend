@@ -14,6 +14,8 @@ const Auth = () => {
     const [formValue, setFormValue] = useState(initialState)
 	const [showRegister, setShowRegister] = useState(false)
 
+	const { firstName, lastName, email, password, confirmPassword } = formValue
+
     return (
 		<section className='vh-100 vw-100 gradient-custom'>
 			<div className='container py-4 h-100'>
@@ -33,6 +35,13 @@ const Auth = () => {
 											? 'Please Enter your Email and Password'
 											: 'Please Enter User Details'}
 									</p>
+									<div className='form-outline form-white mb-4'>
+										<MDBInput
+											type='email'
+											name='email'
+											value={email}
+										/>
+									</div>
 								</div>
 							</div>
 						</div>
