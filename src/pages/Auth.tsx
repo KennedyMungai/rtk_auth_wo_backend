@@ -14,7 +14,7 @@ const Auth = () => {
     const [formValue, setFormValue] = useState(initialState)
 	const [showRegister, setShowRegister] = useState(false)
 
-	return <div>Auth</div>
+	return <section className='vh-100 gradient-custom'></section>
 }
 
 export default Auth
