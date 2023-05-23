@@ -61,6 +61,7 @@ const Auth = () => {
 										<button
 											className='btn btn-outline-light btn-lg px-5 my-2'
 											type='button'
+											style={{ cursor: 'pointer' }}
 										>
 											Login
 										</button>
@@ -68,6 +69,7 @@ const Auth = () => {
 										<button
 											className='btn btn-outline-light btn-lg px-5 my-2'
 											type='button'
+											style={{ cursor: 'pointer' }}
 										>
 											Register
 										</button>
