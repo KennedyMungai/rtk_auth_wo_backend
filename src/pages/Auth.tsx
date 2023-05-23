@@ -11,7 +11,8 @@ const initialState = {
 }
 
 const Auth = () => {
-	const [formValue, setFormValue] = useState(initialState)
+    const [formValue, setFormValue] = useState(initialState)
+	const [showRegister, setShowRegister] = useState(false)
 
 	return <div>Auth</div>
 }
