@@ -8,7 +8,7 @@ export interface AuthState {
 
 const initialState: AuthState = { name: null, token: null }
 
-export const authSlice = createSlice({
+const authSlice = createSlice({
 	name: 'Auth',
 	initialState,
 	reducers: {
@@ -33,3 +33,5 @@ export const authSlice = createSlice({
 export const selectAuth = (state: RootState) => state.auth
 
 export const { setUser } = authSlice.actions
+
+export default authSlice.reducer
