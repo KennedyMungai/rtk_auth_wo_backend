@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { authApi } from '../services/authApi'
 import { setupListeners } from '@reduxjs/toolkit/query/react'
+import { authApi } from '../services/authApi'
 
 export const store = configureStore({
 	reducer: {
