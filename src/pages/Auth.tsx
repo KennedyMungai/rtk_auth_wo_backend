@@ -42,7 +42,7 @@ const Auth = () => {
 											<div className='form-outline form-white mb-4'>
 												<MDBInput
 													type='text'
-													name='firstname'
+													name='firstName'
 													value={firstName}
 													onChange={handleChange}
 													label='First Name'
@@ -52,8 +52,8 @@ const Auth = () => {
 											<div className='form-outline form-white mb-4'>
 												<MDBInput
 													type='text'
-													name='lastname'
-													value={lastname}
+													name='lastName'
+													value={lastName}
 													onChange={handleChange}
 													label='Last Name'
 													className='form-control form-control-lg'
@@ -85,10 +85,10 @@ const Auth = () => {
 										<div className='form-outline form-white mb-4'>
 											<MDBInput
 												type='password'
-												name='password'
-												value={password}
+												name='confirmPassword'
+												value={confirmPassword}
 												onChange={handleChange}
-												label='Password'
+												label='Confirm Password'
 												className='form-control form-control-lg'
 											/>
 										</div>
