@@ -43,6 +43,8 @@ const Auth = () => {
 											name='email'
 											value={email}
 											onChange={handleChange}
+											label='Email'
+											className='form-control form-control-lg'
 										/>
 									</div>
 								</div>
