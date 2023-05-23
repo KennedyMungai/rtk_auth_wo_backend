@@ -82,6 +82,11 @@ const Auth = () => {
 														style={{
 															cursor: 'pointer'
 														}}
+														onClick={() =>
+															setShowRegister(
+																true
+															)
+														}
 													>
 														Sign Up
 													</p>
@@ -94,6 +99,11 @@ const Auth = () => {
 														style={{
 															cursor: 'pointer'
 														}}
+														onClick={() =>
+															setShowRegister(
+																false
+															)
+														}
 													>
 														Sign In
 													</p>
