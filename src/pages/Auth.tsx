@@ -20,6 +20,8 @@ const Auth = () => {
 		setFormValue({ ...formValue, [e.target.name]: e.target.value })
 	}
 
+	const handleLogin = () => {}
+
     return (
 		<section className='vh-100 vw-100 gradient-custom'>
 			<div className='container py-4 h-100'>
