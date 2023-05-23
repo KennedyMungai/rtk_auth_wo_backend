@@ -72,45 +72,41 @@ const Auth = () => {
 											Register
 										</button>
 									)}
-									<div className=''>
-										<h5 className='mb-0'>
-											{!showRegister ? (
-												<>
-													Don't have an account?{' '}
-													<p
-														className='text-white-50 fw-bold'
-														style={{
-															cursor: 'pointer'
-														}}
-														onClick={() =>
-															setShowRegister(
-																true
-															)
-														}
-													>
-														Sign Up
-													</p>
-												</>
-											) : (
-												<>
-													Already have an account?
-													<p
-														className='text-white-50 fw-bold'
-														style={{
-															cursor: 'pointer'
-														}}
-														onClick={() =>
-															setShowRegister(
-																false
-															)
-														}
-													>
-														Sign In
-													</p>
-												</>
-											)}
-										</h5>
-									</div>
+								</div>
+								<div className=''>
+									<h5 className='mb-0'>
+										{!showRegister ? (
+											<>
+												Don't have an account?{' '}
+												<p
+													className='text-white-50 fw-bold'
+													style={{
+														cursor: 'pointer'
+													}}
+													onClick={() =>
+														setShowRegister(true)
+													}
+												>
+													Sign Up
+												</p>
+											</>
+										) : (
+											<>
+												Already have an account?
+												<p
+													className='text-white-50 fw-bold'
+													style={{
+														cursor: 'pointer'
+													}}
+													onClick={() =>
+														setShowRegister(false)
+													}
+												>
+													Sign In
+												</p>
+											</>
+										)}
+									</h5>
 								</div>
 							</div>
 						</div>
