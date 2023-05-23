@@ -14,6 +14,7 @@ function App() {
 	return (
 		<main className='App'>
 			<Router>
+				<ToastContainer />
 				<Routes>
 					<Route path='/' element={<Navigate to='/auth' replace />} />
 					<Route path='/auth' element={<Auth />} />
