@@ -16,7 +16,9 @@ const Auth = () => {
 
 	const { firstName, lastName, email, password, confirmPassword } = formValue
 
-	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {}
+	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+		setFormValue({ ...formValue, [e.target.name]: e.target.value })
+	}
 
     return (
 		<section className='vh-100 vw-100 gradient-custom'>
