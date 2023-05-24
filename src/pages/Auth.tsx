@@ -50,7 +50,7 @@ const Auth = () => {
 		if (isLoginSuccess) {
 			toast.success('User logged in successfully')
 			dispatch(
-				setUser({ token: loginData.token, name: loginData.result.name })
+				setUser({ name: loginData.result.name, token: loginData.token })
 			)
 			navigate('/dashboard')
 		}
