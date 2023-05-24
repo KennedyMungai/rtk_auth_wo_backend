@@ -78,7 +78,7 @@ const Auth = () => {
 			)
 			navigate('/dashboard')
 		}
-	}, [isLoginSuccess])
+	}, [isLoginSuccess, isRegisterSuccess])
 
 	return (
 		<section className='vh-100 vw-100 gradient-custom'>
