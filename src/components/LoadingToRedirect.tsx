@@ -12,6 +12,8 @@ const LoadingToRedirect = () => {
 		}, 1000)
 
 		count === 0 && navigate('/auth')
+
+        return () => clearInterval(interval)
 	}, [count, navigate])
     
 
