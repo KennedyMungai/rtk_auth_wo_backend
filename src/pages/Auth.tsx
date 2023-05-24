@@ -51,7 +51,7 @@ const Auth = () => {
 		setFormValue({ ...formValue, [e.target.name]: e.target.value })
 	}
 
-	const handleRegister = () => {}
+	const handleRegister = async () => {}
 
 	const handleLogin = async () => {
 		if (email && password) {
