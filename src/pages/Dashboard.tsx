@@ -16,7 +16,18 @@ const Dashboard = () => {
 							style={{ borderRadius: '1rem' }}
 						>
 							<div className='card-body p-4 text-center'>
-								<div className='mb-md-5 mt-md-4 pb-5'></div>
+								<div className='mb-md-5 mt-md-4 pb-5'>
+									<h2 className='fw-bold mb-2'>
+										Welcome to the Dashboard
+									</h2>
+									<h4>Name: {name}</h4>
+									<button
+										className='btn btn-outline-light btn-lg px-5 mt-3'
+										type='button'
+									>
+										Log Out
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
