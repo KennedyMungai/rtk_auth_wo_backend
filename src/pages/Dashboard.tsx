@@ -1,11 +1,18 @@
 import { useNavigate } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../app/hooks'
 import { logOut, selectAuth } from '../features/auth/authSlice'
+import { toast } from 'react-toastify'
 
 const Dashboard = () => {
 	const { name } = useAppSelector(selectAuth)
 	const navigate = useNavigate()
 	const dispatch = useAppDispatch()
+
+	const handleLogout = () => {
+		dispatch(logOut())
+		toast.success('User Logged Out')
+		navigate('/auth')
+	}
 
 	return (
 		<section className='vh-100 gradient-custom'>
@@ -25,7 +32,7 @@ const Dashboard = () => {
 									<button
 										className='btn btn-outline-light btn-lg px-5 mt-3'
 										type='button'
-										onClick={() => dispatch(logOut)}
+										onClick={() => handleLogout()}
 									>
 										Log Out
 									</button>
