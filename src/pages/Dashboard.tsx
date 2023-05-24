@@ -1,5 +1,3 @@
-// type Props = {}
-
 const Dashboard = () => {
 	return <div>Dashboard</div>
 }
