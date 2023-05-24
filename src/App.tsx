@@ -9,8 +9,11 @@ import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
 import Auth from './pages/Auth'
 import Dashboard from './pages/Dashboard'
+import { useAppDispatch } from './app/hooks'
 
 function App() {
+	const dispatch = useAppDispatch()
+
 	return (
 		<main className='App'>
 			<Router>
