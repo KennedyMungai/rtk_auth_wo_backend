@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router-dom'
-import { useAppSelector } from '../app/hooks'
+import { useAppDispatch, useAppSelector } from '../app/hooks'
 import { selectAuth } from '../features/auth/authSlice'
 
 const Dashboard = () => {
 	const { name } = useAppSelector(selectAuth)
 	const navigate = useNavigate()
+	const dispatch = useAppDispatch()
 
 	return (
 		<section className='vh-100 gradient-custom'>
