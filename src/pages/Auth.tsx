@@ -1,9 +1,9 @@
 import { MDBInput } from 'mdb-react-ui-kit'
 import { ChangeEvent, useEffect, useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
-import { useLoginUserMutation } from '../services/authApi'
+import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { useAppDispatch } from '../app/hooks'
+import { useLoginUserMutation } from '../services/authApi'
 
 const initialState = {
 	firstName: '',
