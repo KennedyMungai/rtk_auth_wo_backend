@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const LoadingToRedirect = () => {
+	const [count, setCount] = useState<number>(5)
+
 	return <div>LoadingToRedirect</div>
 }
 
