@@ -8,7 +8,7 @@ type Props = {
 }
 
 const PrivateRoute = ({ children }: Props) => {
-	const token = useAppSelector(selectAuth)
+	const { token } = useAppSelector(selectAuth)
 
 	return token ? children : <LoadingToRedirect />
 }
