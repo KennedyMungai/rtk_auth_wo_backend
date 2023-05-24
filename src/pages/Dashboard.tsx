@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../app/hooks'
-import { selectAuth } from '../features/auth/authSlice'
+import { logOut, selectAuth } from '../features/auth/authSlice'
 
 const Dashboard = () => {
 	const { name } = useAppSelector(selectAuth)
@@ -25,6 +25,7 @@ const Dashboard = () => {
 									<button
 										className='btn btn-outline-light btn-lg px-5 mt-3'
 										type='button'
+										onClick={() => dispatch(logOut)}
 									>
 										Log Out
 									</button>
