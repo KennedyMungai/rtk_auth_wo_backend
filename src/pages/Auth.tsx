@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { useAppDispatch } from '../app/hooks'
 import { useLoginUserMutation } from '../services/authApi'
+import { setUser } from '../features/auth/authSlice'
 
 const initialState = {
 	firstName: '',
@@ -48,6 +49,7 @@ const Auth = () => {
 	useEffect(() => {
 		if (isLoginSuccess) {
 			toast.success('User logged in successfully')
+			dispatch(setUser({ token: loginData.token, name: loginData.name }))
 			navigate('/dashboard')
 		}
 	}, [isLoginSuccess])
