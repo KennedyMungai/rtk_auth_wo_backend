@@ -4,7 +4,10 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { useAppDispatch } from '../app/hooks'
 import { setUser } from '../features/auth/authSlice'
-import { useLoginUserMutation } from '../services/authApi'
+import {
+	useLoginUserMutation,
+	useRegisterUserMutation
+} from '../services/authApi'
 
 const initialState = {
 	firstName: '',
