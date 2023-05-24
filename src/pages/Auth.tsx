@@ -51,7 +51,16 @@ const Auth = () => {
 		setFormValue({ ...formValue, [e.target.name]: e.target.value })
 	}
 
-	const handleRegister = async () => {}
+	const handleRegister = async () => {
+		if (password !== confirmPassword) {
+			toast.error('Passwords do not match')
+			return
+		}
+
+		if (firstName && lastName && password && email) {
+			await registerUser({ firstName, lastName, email, password })
+		}
+	}
 
 	const handleLogin = async () => {
 		if (email && password) {
