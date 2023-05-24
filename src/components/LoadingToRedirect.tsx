@@ -15,7 +15,19 @@ const LoadingToRedirect = () => {
 	}, [count, navigate])
     
 
-	return <div>LoadingToRedirect</div>
+    return (
+		<div className='vh-100 gradient-custom'>
+			<MDBModal show={true}>
+				<MDBModalDialog centered>
+					<MDBModalContent>
+						<p className='mt-3'>
+							Redirecting you in {count} seconds
+						</p>
+					</MDBModalContent>
+				</MDBModalDialog>
+			</MDBModal>
+		</div>
+	)
 }
 
 export default LoadingToRedirect
