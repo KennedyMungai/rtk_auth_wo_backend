@@ -10,9 +10,16 @@ import './App.css'
 import Auth from './pages/Auth'
 import Dashboard from './pages/Dashboard'
 import { useAppDispatch } from './app/hooks'
+import { useEffect } from 'react'
+import { setUser } from './features/auth/authSlice'
 
 function App() {
 	const dispatch = useAppDispatch()
+	const user = JSON.parse(localStorage.getItem('user') || '{}')
+
+	useEffect(() => {
+		dispatch(setUser(user))
+	}, [])
 
 	return (
 		<main className='App'>
