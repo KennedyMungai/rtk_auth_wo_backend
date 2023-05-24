@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import { useAppDispatch, useAppSelector } from '../app/hooks'
 import { logOut, selectAuth } from '../features/auth/authSlice'
-import { toast } from 'react-toastify'
 
 const Dashboard = () => {
 	const { name } = useAppSelector(selectAuth)
