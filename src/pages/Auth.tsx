@@ -49,7 +49,9 @@ const Auth = () => {
 	useEffect(() => {
 		if (isLoginSuccess) {
 			toast.success('User logged in successfully')
-			dispatch(setUser({ token: loginData.token, name: loginData.name }))
+			dispatch(
+				setUser({ token: loginData.token, name: loginData.result.name })
+			)
 			navigate('/dashboard')
 		}
 	}, [isLoginSuccess])
