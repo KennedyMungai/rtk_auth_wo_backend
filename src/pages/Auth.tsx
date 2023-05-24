@@ -78,6 +78,17 @@ const Auth = () => {
 			)
 			navigate('/dashboard')
 		}
+
+		if (isRegisterSuccess) {
+			toast.success('User registered successfully')
+			dispatch(
+				setUser({
+					name: registerData.result.name,
+					token: registerData.token
+				})
+			)
+			navigate('/dashboard')
+		}
 	}, [isLoginSuccess, isRegisterSuccess])
 
 	return (
