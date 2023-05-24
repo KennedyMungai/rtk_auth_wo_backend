@@ -3,6 +3,7 @@ import { ChangeEvent, useEffect, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useLoginUserMutation } from '../services/authApi'
 import { toast } from 'react-toastify'
+import { useAppDispatch } from '../app/hooks'
 
 const initialState = {
 	firstName: '',
@@ -17,6 +18,8 @@ const Auth = () => {
 	const [showRegister, setShowRegister] = useState(false)
 
 	const navigate = useNavigate()
+
+	const dispatch = useAppDispatch()
 
 	const [
 		loginUser,
