@@ -39,13 +39,13 @@ const Auth = () => {
 			await loginUser({ email, password })
 		} else {
 			toast.error('Please fill all input fields')
-			navigate('/dashboard')
 		}
 	}
 
 	useEffect(() => {
 		if (isLoginSuccess) {
 			toast.success('User logged in successfully')
+			navigate('/dashboard')
 		}
 	}, [isLoginSuccess])
 
