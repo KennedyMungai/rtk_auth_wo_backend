@@ -35,6 +35,16 @@ const Auth = () => {
 		}
 	] = useLoginUserMutation()
 
+	const [
+		registerUser,
+		{
+			data: registerData,
+			isSuccess: isRegisterSuccess,
+			isError: isRegisterError,
+			error: registerError
+		}
+	] = useRegisterUserMutation()
+
 	const { firstName, lastName, email, password, confirmPassword } = formValue
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
