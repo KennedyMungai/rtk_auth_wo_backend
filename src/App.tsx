@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import {
 	Navigate,
 	Route,
@@ -7,11 +8,10 @@ import {
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
+import { useAppDispatch } from './app/hooks'
+import { setUser } from './features/auth/authSlice'
 import Auth from './pages/Auth'
 import Dashboard from './pages/Dashboard'
-import { useAppDispatch } from './app/hooks'
-import { useEffect } from 'react'
-import { setUser } from './features/auth/authSlice'
 
 function App() {
 	const dispatch = useAppDispatch()
